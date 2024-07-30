@@ -1,0 +1,62 @@
+[
+  {
+    "shop_id": "66964232eb8beb0ab02f3daa",
+    "item": ["Smartphone", "Laptop"],
+    "price": 1200
+  },
+  {
+    "shop_id": "66964248eb8beb0ab02f3dae",
+    "item": ["Game Console", "Controller"],
+    "price": 500
+  },
+  {
+    "shop_id": "6696426deb8beb0ab02f3db2",
+    "item": ["Bouquet", "Potted Plant"],
+    "price": 80
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "item": ["Smartphone", "Laptop"],
+    "price": 1200
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "item": ["Headphones", "Tablet"],
+    "price": 800
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "item": ["Camera", "Lens"],
+    "price": 1500
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "item": ["Game Console", "Controller"],
+    "price": 500
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "item": ["VR Headset", "Gaming Chair"],
+    "price": 1200
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "item": ["Mouse", "Keyboard"],
+    "price": 300
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "item": ["Bouquet", "Potted Plant"],
+    "price": 80
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "item": ["Indoor Plant", "Fertilizer"],
+    "price": 100
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "item": ["Flower Arrangement", "Vase"],
+    "price": 150
+  }
+]

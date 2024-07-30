@@ -1,0 +1,62 @@
+[
+  {
+    "shop_id": "66964232eb8beb0ab02f3daa",
+    "purchased_items": ["Tablet", "Keyboard"],
+    "amount": 800
+  },
+  {
+    "shop_id": "66964248eb8beb0ab02f3dae",
+    "purchased_items": ["Board Game", "Cards"],
+    "amount": 150
+  },
+  {
+    "shop_id": "6696426deb8beb0ab02f3db2",
+    "purchased_items": ["Seeds", "Fertilizer"],
+    "amount": 50
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "purchased_items": ["Tablet", "Keyboard"],
+    "amount": 800
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "purchased_items": ["Printer", "Scanner"],
+    "amount": 500
+  },
+  {
+    "shop_id": "6696428beb8beb0ab02f3db6",
+    "purchased_items": ["Desk", "Chair"],
+    "amount": 1200
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "purchased_items": ["Board Game", "Cards"],
+    "amount": 150
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "purchased_items": ["Puzzle", "Dice"],
+    "amount": 50
+  },
+  {
+    "shop_id": "6696429feb8beb0ab02f3dba",
+    "purchased_items": ["Console Controller", "Headset"],
+    "amount": 300
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "purchased_items": ["Seeds", "Plant Food"],
+    "amount": 50
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "purchased_items": ["Gardening Tools", "Pot"],
+    "amount": 200
+  },
+  {
+    "shop_id": "669642b5eb8beb0ab02f3dbe",
+    "purchased_items": ["Decorative Stones", "Watering Can"],
+    "amount": 100
+  }
+]

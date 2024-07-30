@@ -1,0 +1,82 @@
+[
+  {
+    "username": "retailer1",
+    "password": "password123",
+    "email": "retailer1@example.com",
+    "role": "retailer",
+    "phone_number": "123-456-7890",
+    "user_id": 1001
+  },
+  {
+    "username": "retailer2",
+    "password": "password123",
+    "email": "retailer2@example.com",
+    "role": "retailer",
+    "phone_number": "234-567-8901",
+    "user_id": 1002
+  },
+  {
+    "username": "retailer3",
+    "password": "password123",
+    "email": "retailer3@example.com",
+    "role": "retailer",
+    "phone_number": "345-678-9012",
+    "user_id": 1003
+  },
+  {
+    "username": "retailer4",
+    "password": "password123",
+    "email": "retailer4@example.com",
+    "role": "retailer",
+    "phone_number": "456-789-0123",
+    "user_id": 1004
+  },
+  {
+    "username": "retailer5",
+    "password": "password123",
+    "email": "retailer5@example.com",
+    "role": "retailer",
+    "phone_number": "567-890-1234",
+    "user_id": 1005
+  },
+  {
+    "username": "retailer6",
+    "password": "password123",
+    "email": "retailer6@example.com",
+    "role": "retailer",
+    "phone_number": "678-901-2345",
+    "user_id": 1006
+  },
+  {
+    "username": "retailer7",
+    "password": "password123",
+    "email": "retailer7@example.com",
+    "role": "retailer",
+    "phone_number": "789-012-3456",
+    "user_id": 1007
+  },
+  {
+    "username": "retailer8",
+    "password": "password123",
+    "email": "retailer8@example.com",
+    "role": "retailer",
+    "phone_number": "890-123-4567",
+    "user_id": 1008
+  },
+  {
+    "username": "retailer9",
+    "password": "password123",
+    "email": "retailer9@example.com",
+    "role": "retailer",
+    "phone_number": "901-234-5678",
+    "user_id": 1009
+  },
+  {
+    "username": "retailer10",
+    "password": "password123",
+    "email": "retailer10@example.com",
+    "role": "retailer",
+    "phone_number": "012-345-6789",
+    "user_id": 1010
+  }
+]

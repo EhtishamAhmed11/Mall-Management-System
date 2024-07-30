@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Fashion Hub",
+    "type": "Clothing",
+    "floor": "1",
+    "number": "101",
+    "ownerId": "669627e6e513bd5c1490d983",
+    "shop_id": 2001
+  },
+  {
+    "name": "Tech World",
+    "type": "Electronics",
+    "floor": "2",
+    "number": "202",
+    "ownerId": "669627e6e513bd5c1490d986",
+    "shop_id": 2002
+  },
+  {
+    "name": "Book Haven",
+    "type": "Books",
+    "floor": "3",
+    "number": "303",
+    "ownerId": "669627e6e513bd5c1490d985",
+    "shop_id": 2003
+  },
+  {
+    "name": "Grocery Galore",
+    "type": "Groceries",
+    "floor": "1",
+    "number": "104",
+    "ownerId": "669627e6e513bd5c1490d984",
+    "shop_id": 2004
+  },
+  {
+    "name": "Toyland",
+    "type": "Toys",
+    "floor": "2",
+    "number": "205",
+    "ownerId": "669627e6e513bd5c1490d987",
+    "shop_id": 2005
+  },
+  {
+    "name": "Beauty Bliss",
+    "type": "Beauty Products",
+    "floor": "2",
+    "number": "206",
+    "ownerId": "669627e6e513bd5c1490d98a",
+    "shop_id": 2006
+  },
+  {
+    "name": "Sporty Spot",
+    "type": "Sports Equipment",
+    "floor": "3",
+    "number": "307",
+    "ownerId": "669627e6e513bd5c1490d98b",
+    "shop_id": 2007
+  },
+  {
+    "name": "Gadget Gizmos",
+    "type": "Electronics",
+    "floor": "3",
+    "number": "308",
+    "ownerId": "669627e6e513bd5c1490d98c",
+    "shop_id": 2008
+  },
+  {
+    "name": "Kitchen Kingdom",
+    "type": "Kitchenware",
+    "floor": "1",
+    "number": "109",
+    "ownerId": "669627e6e513bd5c1490d989",
+    "shop_id": 2009
+  },
+  {
+    "name": "Pet Paradise",
+    "type": "Pet Supplies",
+    "floor": "1",
+    "number": "110",
+    "ownerId": "669627e6e513bd5c1490d988",
+    "shop_id": 2010
+  }
+]

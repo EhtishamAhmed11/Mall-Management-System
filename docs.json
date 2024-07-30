@@ -1,0 +1,744 @@
+openapi: 3.0.0
+info:
+  title: Mall Management
+  contact: {}
+  version: '1.0'
+servers:
+- url: http://localhost:5000/api
+  variables: {}
+paths:
+  /auth/register:
+    post:
+      tags:
+      - authentication
+      summary: register user
+      operationId: registeruser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/registeruserrequest'
+              - example:
+                  username: test
+                  password: test
+                  email: test@gmail.com
+                  phone_number: '12321'
+            example:
+              username: test
+              password: test
+              email: test@gmail.com
+              phone_number: '12321'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /auth/login:
+    post:
+      tags:
+      - authentication
+      summary: Login User
+      operationId: LoginUser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/LoginUserRequest'
+              - example:
+                  email: test@gmail.com
+                  password: test
+            example:
+              email: test@gmail.com
+              password: test
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /auth/logout:
+    post:
+      tags:
+      - authentication
+      summary: Logout
+      operationId: Logout
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+      security: []
+  /users:
+    get:
+      tags:
+      - User
+      summary: get all user
+      operationId: getalluser
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /users/showMe:
+    get:
+      tags:
+      - User
+      summary: show me
+      operationId: showme
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /users/updateUser:
+    patch:
+      tags:
+      - User
+      summary: update user
+      operationId: updateuser
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/updateuserrequest'
+              - example:
+                  username: admin
+                  email: admin@gmail.com
+            example:
+              username: admin
+              email: admin@gmail.com
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /users/updateUserPassword:
+    patch:
+      tags:
+      - User
+      summary: update user password
+      operationId: updateuserpassword
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/updateuserpasswordrequest'
+              - example:
+                  oldPassword: '0000'
+                  newPassword: admin
+            example:
+              oldPassword: '0000'
+              newPassword: admin
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /users/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The user ID.
+    get:
+      tags:
+      - User
+      summary: get single User
+      operationId: getsingleUser
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /shops:
+    post:
+      tags:
+      - shop
+      summary: create shop
+      operationId: createshop
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/createshoprequest'
+              - example:
+                  name: shop 2
+                  type: test
+                  floor: 1st
+                  number: '001'
+            example:
+              name: shop 2
+              type: test
+              floor: 1st
+              number: '001'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+      - shop
+      summary: get all shops
+      operationId: getallshops
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /shops/showAllMyShops:
+    get:
+      tags:
+      - shop
+      summary: get current user shops
+      operationId: getcurrentusershops
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /shops/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The Shop ID.
+    get:
+      tags:
+      - shop
+      summary: get single shop
+      operationId: getsingleshop
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - shop
+      summary: Update shop
+      operationId: Updateshop
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/UpdateshopRequest'
+              - example:
+                  name: book center
+                  type: stationary
+                  floor: 2nd
+                  number: '002'
+            example:
+              name: book center
+              type: stationary
+              floor: 2nd
+              number: '002'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /sales:
+    post:
+      tags:
+      - Sales
+      summary: create a sale
+      operationId: createasale
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/createasalerequest'
+              - example:
+                  shop_id: 66a6246a23af9a9e4fcaa89f
+                  items:
+                  - name: Item 1
+                    quantity: 2
+                    price: 10
+                  - name: Item 2
+                    quantity: 1
+                    price: 20
+            example:
+              shop_id: 66a6246a23af9a9e4fcaa89f
+              items:
+              - name: Item 1
+                quantity: 2
+                price: 10
+              - name: Item 2
+                quantity: 1
+                price: 20
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+      - Sales
+      summary: Get all sales
+      operationId: Getallsales
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /sales/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The sales ID.
+    get:
+      tags:
+      - Sales
+      summary: get single sale
+      operationId: getsinglesale
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    patch:
+      tags:
+      - Sales
+      summary: Update sales
+      operationId: Updatesales
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/UpdatesalesRequest'
+              - example:
+                  shop_id: 66a6246a23af9a9e4fcaa89f
+                  items:
+                  - name: new Item 1
+                    quantity: 4
+                    price: 10
+                  - name: new Item 2
+                    quantity: 3
+                    price: 20
+            example:
+              shop_id: 66a6246a23af9a9e4fcaa89f
+              items:
+              - name: new Item 1
+                quantity: 4
+                price: 10
+              - name: new Item 2
+                quantity: 3
+                price: 20
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Sales
+      summary: delete request
+      operationId: deleterequest
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /purchase:
+    post:
+      tags:
+      - Purchase
+      summary: create purchase
+      operationId: createpurchase
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/createpurchaserequest'
+              - example:
+                  shop_id: 66a6246a23af9a9e4fcaa89f
+                  items:
+                  - name: Item 1
+                    quantity: 2
+                    price: 10
+                  - name: Item 2
+                    quantity: 1
+                    price: 20
+            example:
+              shop_id: 66a6246a23af9a9e4fcaa89f
+              items:
+              - name: Item 1
+                quantity: 2
+                price: 10
+              - name: Item 2
+                quantity: 1
+                price: 20
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    get:
+      tags:
+      - Purchase
+      summary: get purchase
+      operationId: getpurchase
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /:
+    get:
+      tags:
+      - Purchase
+      summary: get single Purchase
+      operationId: getsinglePurchase
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+  /puchase/{id}:
+    parameters:
+      - in: path
+        name: id
+        schema:
+          type: string
+        required: true
+        description: The purchase ID.
+
+    patch:
+      tags:
+      - Purchase
+      summary: update Purchase
+      operationId: updatePurchase
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              allOf:
+              - $ref: '#/components/schemas/updatePurchaseRequest'
+              - example:
+                  shop_id: 66a6246a23af9a9e4fcaa89f
+                  items:
+                  - name: new Item 1
+                    quantity: 3
+                    price: 30
+                  - name: new Item 2
+                    quantity: 2
+                    price: 50
+            example:
+              shop_id: 66a6246a23af9a9e4fcaa89f
+              items:
+              - name: new Item 1
+                quantity: 3
+                price: 30
+              - name: new Item 2
+                quantity: 2
+                price: 50
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+    delete:
+      tags:
+      - Purchase
+      summary: Delete Purchase
+      operationId: DeletePurchase
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    registeruserrequest:
+      title: registeruserrequest
+      required:
+      - username
+      - password
+      - email
+      - phone_number
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+        email:
+          type: string
+        phone_number:
+          type: string
+      example:
+        username: test
+        password: test
+        email: test@gmail.com
+        phone_number: '12321'
+    LoginUserRequest:
+      title: LoginUserRequest
+      required:
+      - email
+      - password
+      type: object
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+      example:
+        email: test@gmail.com
+        password: test
+    updateuserrequest:
+      title: updateuserrequest
+      required:
+      - username
+      - email
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+      example:
+        username: admin
+        email: admin@gmail.com
+    updateuserpasswordrequest:
+      title: updateuserpasswordrequest
+      required:
+      - oldPassword
+      - newPassword
+      type: object
+      properties:
+        oldPassword:
+          type: string
+        newPassword:
+          type: string
+      example:
+        oldPassword: '0000'
+        newPassword: admin
+    createshoprequest:
+      title: createshoprequest
+      required:
+      - name
+      - type
+      - floor
+      - number
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        floor:
+          type: string
+        number:
+          type: string
+      example:
+        name: shop 2
+        type: test
+        floor: 1st
+        number: '001'
+    UpdateshopRequest:
+      title: UpdateshopRequest
+      required:
+      - name
+      - type
+      - floor
+      - number
+      type: object
+      properties:
+        name:
+          type: string
+        type:
+          type: string
+        floor:
+          type: string
+        number:
+          type: string
+      example:
+        name: book center
+        type: stationary
+        floor: 2nd
+        number: '002'
+    createasalerequest:
+      title: createasalerequest
+      required:
+      - shop_id
+      - items
+      type: object
+      properties:
+        shop_id:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+          description: ''
+      example:
+        shop_id: 66a6246a23af9a9e4fcaa89f
+        items:
+        - name: Item 1
+          quantity: 2
+          price: 10
+        - name: Item 2
+          quantity: 1
+          price: 20
+    Item:
+      title: Item
+      required:
+      - name
+      - quantity
+      - price
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        price:
+          type: integer
+          format: int32
+      example:
+        name: Item 1
+        quantity: 2
+        price: 10
+    UpdatesalesRequest:
+      title: UpdatesalesRequest
+      required:
+      - shop_id
+      - items
+      type: object
+      properties:
+        shop_id:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+          description: ''
+      example:
+        shop_id: 66a6246a23af9a9e4fcaa89f
+        items:
+        - name: new Item 1
+          quantity: 4
+          price: 10
+        - name: new Item 2
+          quantity: 3
+          price: 20
+    createpurchaserequest:
+      title: createpurchaserequest
+      required:
+      - shop_id
+      - items
+      type: object
+      properties:
+        shop_id:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+          description: ''
+      example:
+        shop_id: 66a6246a23af9a9e4fcaa89f
+        items:
+        - name: Item 1
+          quantity: 2
+          price: 10
+        - name: Item 2
+          quantity: 1
+          price: 20
+    updatePurchaseRequest:
+      title: updatePurchaseRequest
+      required:
+      - shop_id
+      - items
+      type: object
+      properties:
+        shop_id:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+          description: ''
+      example:
+        shop_id: 66a6246a23af9a9e4fcaa89f
+        items:
+        - name: new Item 1
+          quantity: 3
+          price: 30
+        - name: new Item 2
+          quantity: 2
+          price: 50
+  securitySchemes:
+    httpBearer:
+      type: http
+      scheme: bearer
+security:
+- httpBearer: []
+tags:
+- name: authentication
+- name: User
+- name: shop
+- name: Sales
+- name: Purchase
